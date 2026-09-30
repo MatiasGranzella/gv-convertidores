@@ -44,7 +44,7 @@ export default function Header() {
         <a
           href="#top"
           className="flex items-center"
-          aria-label="GV Convertidores — Inicio"
+          aria-label="GV Convertidores de Par — Inicio"
         >
           <Image
             src="/gv-logo-256.png"

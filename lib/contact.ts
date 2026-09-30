@@ -2,8 +2,8 @@
 // Editar acá → cambia en header, hero, location, footer, JSON-LD y CTAs.
 
 export const BUSINESS = {
-  name: "GV Convertidores",
-  legalName: "GV Convertidores",
+  name: "GV Convertidores de Par",
+  legalName: "GV Convertidores de Par",
   tagline: "Especialistas en convertidores de torque",
   yearsExperience: 40,
   siteUrl: "https://gvconvertidores.com.ar", // TODO: confirmar dominio final
@@ -20,7 +20,7 @@ export const CONTACT = {
   phoneDisplay: "11 4972 4829",
   // Mensaje pre-llenado al abrir WhatsApp.
   whatsappPrefilledMessage:
-    "Hola GV Convertidores, quería consultar por un convertidor de torque.",
+    "Hola GV Convertidores de Par, quería consultar por un convertidor de torque.",
   email: "contacto@gvconvertidores.com.ar", // TODO: opcional
 } as const;
 
@@ -41,10 +41,10 @@ export const ADDRESS = {
 export const HOURS = {
   // Formato para mostrar al usuario.
   display: [
-    { days: "Lunes a viernes", hours: "8:00 a 16:30" },
+    { days: "Lunes a viernes", hours: "8:00 a 16:00" },
   ],
   // Formato schema.org para JSON-LD.
-  schema: ["Mo-Fr 08:00-16:30"],
+  schema: ["Mo-Fr 08:00-16:00"],
 } as const;
 
 // URL del embed de Google Maps (sacar de Maps → Compartir → Insertar mapa → copiar src del iframe).

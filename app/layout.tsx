@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     "convertidor de torque Villa Crespo",
     "convertidor de torque CABA",
     "Buenos Aires",
-    "GV Convertidores",
+    "GV Convertidores de Par",
   ],
   authors: [{ name: BUSINESS.name }],
   creator: BUSINESS.name,

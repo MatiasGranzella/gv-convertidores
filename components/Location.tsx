@@ -77,7 +77,7 @@ export default function Location() {
             className="relative aspect-[4/3] overflow-hidden rounded-sm bg-brand-darker lg:aspect-auto lg:min-h-[30rem] desk:h-full desk:min-h-0">
             <iframe
               src={MAPS_EMBED_URL}
-              title="Ubicación del taller GV Convertidores en Villa Crespo"
+              title="Ubicación del taller GV Convertidores de Par en Villa Crespo"
               width="100%"
               height="100%"
               style={{ border: 0 }}
