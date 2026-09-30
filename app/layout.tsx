@@ -27,10 +27,13 @@ export const metadata: Metadata = {
     template: `%s | ${BUSINESS.name}`,
   },
   description:
-    "Reparación de convertidores de torque para talleres y mecánicos, en Villa Crespo, CABA. Más de 40 años haciendo solo convertidores, con todo el proceso en taller propio.",
+    "Reparación de convertidores de torque (convertidores de par) de cajas automáticas para talleres y mecánicos, en Villa Crespo, CABA. Más de 40 años haciendo solo convertidores.",
   keywords: [
     "convertidor de torque",
     "reparación convertidor de torque",
+    "convertidor de par",
+    "reparación convertidor de par",
+    "convertidor caja automática",
     "caja automática",
     "reparación caja automática",
     "taller cajas automáticas",
@@ -55,7 +58,7 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: `${BUSINESS.name} — Taller de convertidores de torque en Buenos Aires`,
+        alt: "Convertidor de torque sobre el banco de trabajo",
       },
     ],
   },
@@ -78,9 +81,6 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "/",
-  },
-  icons: {
-    icon: "/favicon.ico",
   },
 };
 

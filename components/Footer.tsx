@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="container-x flex flex-col gap-6 py-10 sm:flex-row sm:items-center sm:justify-between">
         <div className="flex items-center gap-4">
           <Image
-            src="/gv-logo.png"
+            src="/gv-logo-256.png"
             alt=""
             width={256}
             height={256}

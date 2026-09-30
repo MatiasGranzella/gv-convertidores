@@ -1,4 +1,5 @@
 import {
+  ADDRESS,
   CONTACT,
   HOURS,
   MAPS_EMBED_URL,
@@ -26,7 +27,15 @@ export default function Location() {
         </span>
       )),
     },
-    { term: "Dónde", value: "Villa Crespo, CABA" },
+    {
+      term: "Dónde",
+      value: (
+        <>
+          <span className="block">{ADDRESS.street}</span>
+          <span className="block">Villa Crespo, CABA</span>
+        </>
+      ),
+    },
   ];
 
   return (

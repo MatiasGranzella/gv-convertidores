@@ -25,15 +25,18 @@ export const CONTACT = {
 } as const;
 
 export const ADDRESS = {
-  street: "Calle del taller 1234", // TODO: dirección real
-  locality: "Buenos Aires",
+  // Mientras sean null no se publican en el JSON-LD: una dirección inventada
+  // choca con la de Google Maps y perjudica el SEO local.
+  street: "Cnel. Antonio Susini 2335" as string | null,
+  neighborhood: "Villa Crespo",
+  locality: "Ciudad Autónoma de Buenos Aires",
   region: "CABA",
   country: "AR",
-  postalCode: "C1000AAA", // TODO: código postal real
-  // Coordenadas para JSON-LD geo (estimadas — actualizar con las reales).
-  latitude: -34.6037,
-  longitude: -58.3816,
-} as const;
+  postalCode: "C1414CXH" as string | null,
+  // Coordenadas del taller (OpenStreetMap, Susini 2335).
+  latitude: -34.5959867 as number | null,
+  longitude: -58.4520678 as number | null,
+};
 
 export const HOURS = {
   // Formato para mostrar al usuario.
@@ -45,9 +48,8 @@ export const HOURS = {
 } as const;
 
 // URL del embed de Google Maps (sacar de Maps → Compartir → Insertar mapa → copiar src del iframe).
-// Mientras no tengamos la dirección exacta, mostramos el barrio de Villa Crespo.
 export const MAPS_EMBED_URL =
-  "https://www.google.com/maps?q=Villa%20Crespo%2C%20CABA&output=embed";
+  "https://www.google.com/maps?q=Coronel%20Antonio%20Susini%202335%2C%20C1414CXH%20CABA&output=embed";
 
 // Helper para construir el link de WhatsApp con mensaje pre-llenado.
 export function whatsappLink(message: string = CONTACT.whatsappPrefilledMessage): string {

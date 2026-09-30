@@ -41,7 +41,7 @@ export default function ForShops() {
               style={{ "--reveal-delay": "200ms" } as React.CSSProperties}
               className="relative mt-8 aspect-[16/9] overflow-hidden md:mt-10 md:aspect-[3/2] rounded-sm bg-brand-ink desk:mt-[4svh] desk:aspect-auto desk:min-h-0 desk:flex-1">
               <Image
-                src="/convertidor.png"
+                src="/convertidor.jpg"
                 alt="Convertidor de torque sobre el banco de trabajo del taller"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"

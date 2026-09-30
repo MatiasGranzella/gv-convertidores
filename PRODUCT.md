@@ -20,7 +20,7 @@ Contact happens through WhatsApp (prefilled message) and phone. Hours: Monday to
 
 ## Capabilities and Constraints
 - Next.js 15 App Router + Tailwind 3; contact data centralized in `lib/contact.ts`.
-- Street address, postal code, final domain and email are still TODO; the page shows only "Villa Crespo, CABA" until they're confirmed.
+- Address: Cnel. Antonio Susini 2335, Villa Crespo (C1414CXH). Google Maps listing already exists as "GV Convertidores de Par". Domain gvconvertidores.com.ar is bought (2026-09-29) but had no DNS. Email still TODO.
 - JSON-LD `AutoRepair`, sitemap, robots and `es_AR` metadata must be kept.
 - Only one `<h1>`; one `<h2>` per section.
 

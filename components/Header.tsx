@@ -47,10 +47,10 @@ export default function Header() {
           aria-label="GV Convertidores — Inicio"
         >
           <Image
-            src="/gv-logo.png"
+            src="/gv-logo-256.png"
             alt=""
-            width={1254}
-            height={1254}
+            width={256}
+            height={256}
             priority
             className="h-12 w-12 sm:h-16 sm:w-16 desk:h-[calc(var(--nav-h)*0.8)] desk:w-[calc(var(--nav-h)*0.8)]"
           />
