@@ -42,3 +42,4 @@ next-env.d.ts
 /.claude/settings.local.json
 /.impeccable
 *.tar.gz
+/.playwright-mcp

@@ -11,12 +11,20 @@ export default function Location() {
     {
       term: "Teléfono",
       value: (
-        <a
-          href={phoneLink()}
-          className="font-display text-3xl font-bold leading-none desk:text-fit-num underline decoration-brand-blue decoration-2 underline-offset-8 hover:text-brand-blue-light"
-        >
-          {CONTACT.phoneDisplay}
-        </a>
+        <span className="flex flex-col items-start gap-4 desk:gap-[2svh]">
+          {[
+            { href: phoneLink(), label: CONTACT.phoneDisplay },
+            { href: phoneLink(CONTACT.mobile), label: CONTACT.mobileDisplay },
+          ].map((p) => (
+            <a
+              key={p.label}
+              href={p.href}
+              className="font-display text-3xl font-bold leading-none desk:text-fit-num underline decoration-brand-blue decoration-2 underline-offset-8 hover:text-brand-blue-light"
+            >
+              {p.label}
+            </a>
+          ))}
+        </span>
       ),
     },
     {

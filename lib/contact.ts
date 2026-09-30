@@ -18,6 +18,9 @@ export const CONTACT = {
   // Teléfono fijo del taller (formato internacional para tel: y formato local para mostrar).
   phone: "+541149724829",
   phoneDisplay: "11 4972 4829",
+  // Celular del taller (también tiene WhatsApp).
+  mobile: "+5491158048482",
+  mobileDisplay: "11 5804 8482",
   // Mensaje pre-llenado al abrir WhatsApp.
   whatsappPrefilledMessage:
     "Hola GV Convertidores de Par, quería consultar por un convertidor de torque.",
@@ -58,6 +61,6 @@ export function whatsappLink(message: string = CONTACT.whatsappPrefilledMessage)
 }
 
 // Helper para link de teléfono.
-export function phoneLink(): string {
-  return `tel:${CONTACT.phone.replace(/\s|-|\(|\)/g, "")}`;
+export function phoneLink(number: string = CONTACT.phone): string {
+  return `tel:${number.replace(/\s|-|\(|\)/g, "")}`;
 }
