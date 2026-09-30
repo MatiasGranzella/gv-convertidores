@@ -1,0 +1,41 @@
+# Product
+
+<!-- impeccable:product-schema 1 -->
+
+## Platform
+
+web
+
+## Users
+Mechanics and automatic-transmission shops that send torque converters out for repair. They know the part and want a specialist they can trust with a customer's car. Confirmed 2026-09-29: all the work comes from mechanics and shops; private owners don't come. The page speaks only to mechanics, with a single line pointing a stray private owner to their mechanic.
+
+## Product Purpose
+Landing page for GV Convertidores, a real family-run workshop in Villa Crespo (CABA, Buenos Aires) that only repairs torque converters. Success means a visitor sends a WhatsApp or calls the shop. Local search visibility in Buenos Aires is critical.
+
+## Positioning
+Single-specialty shop: they don't do general mechanics, only torque converters. Same shop and same hands for more than 40 years. The whole process (opening, inspection, repair, welding, hydraulic test) is done in-house. The customer talks directly with the technician.
+
+## Operating Context
+Contact happens through WhatsApp (prefilled message) and phone. Hours: Monday to Friday, 8:00 to 16:30. Covers converters for cars, pickups, forklifts and road equipment. There is NO warranty: never mention one. Never state turnaround times or how the converter gets to the shop; both depend on each job.
+
+## Capabilities and Constraints
+- Next.js 15 App Router + Tailwind 3; contact data centralized in `lib/contact.ts`.
+- Street address, postal code, final domain and email are still TODO; the page shows only "Villa Crespo, CABA" until they're confirmed.
+- JSON-LD `AutoRepair`, sitemap, robots and `es_AR` metadata must be kept.
+- Only one `<h1>`; one `<h2>` per section.
+
+## Brand Commitments
+- Name: GV Convertidores. Official logo: `public/gv-logo.png` (round metallic badge: navy "GV", electric-blue glow, brushed steel, a torque converter illustration, text "Especialistas en convertidores de par").
+- Voice: Rioplatense Spanish using "vos", plain and direct, technician to technician. Trustworthy workshop, not a tech startup.
+- Experience claim: "más de 40 años".
+
+## Evidence on Hand
+- Logo: `public/gv-logo.png`.
+- Images: `public/convertidor.png` (converter); `public/hero-mechanic.jpg` (stock photo, the user likes it).
+- No real photos of the workshop yet. The user will add AI-generated converter images. Don't invent testimonials, customer counts, prices or turnaround times.
+
+## Product Principles
+1. Contact first: WhatsApp and phone are always within reach.
+2. Specialty is the argument: everything reinforces "only converters, for 40 years".
+3. Speak mechanic to mechanic: technical where it helps, no consumer-facing explanations.
+4. Real, local and verifiable: Villa Crespo, hours and a real phone number, no marketing filler.
