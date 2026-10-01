@@ -1,3 +1,6 @@
+import Image from "next/image";
+import { BUSINESS } from "@/lib/contact";
+
 // Las descripciones son generales a propósito: si el taller quiere agregar
 // detalle técnico (qué se cambia, cómo se prueba), editar acá.
 const STEPS = [
@@ -25,45 +28,67 @@ const STEPS = [
 
 export default function Process() {
   return (
-    <section id="proceso" className="brushed bg-brand-darker section-y screen text-white">
-      <div className="container-x">
-        <div className="grid grid-cols-1 gap-6 lg:grid-cols-12 lg:items-end">
-          <h2 data-reveal className="display-title text-4xl sm:text-6xl lg:col-span-7 desk:text-fit-h2">
-            Cómo reparamos un convertidor
-          </h2>
-          <p
-            data-reveal
-            style={{ "--reveal-delay": "100ms" } as React.CSSProperties}
-            className="text-lg leading-relaxed text-white/70 lg:col-span-5 desk:text-fit-lead"
-          >
-            Todo el proceso se hace en nuestro taller.
-          </p>
-        </div>
+    <section
+      id="proceso"
+      className="relative isolate overflow-hidden bg-brand-darker section-y screen text-white"
+    >
+      <Image
+        src="/convertidor.jpg"
+        alt=""
+        fill
+        sizes="100vw"
+        className="-z-20 object-cover"
+      />
+      <div className="absolute inset-0 -z-10 bg-brand-darker/85" aria-hidden />
 
-        <ol className="mt-10 grid sm:mt-14 desk:mt-[8svh] grid-cols-1 border-t border-white/15 sm:grid-cols-2 lg:grid-cols-5">
-          {STEPS.map((step, i) => (
-            <li
-              key={step.title}
+      <div className="container-x">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-center lg:gap-16">
+          <div className="lg:col-span-5">
+            <h2 data-reveal className="display-title text-4xl sm:text-6xl desk:text-fit-h2">
+              Cómo reparamos un convertidor
+            </h2>
+            <p
               data-reveal
-              style={{ "--reveal-delay": `${i * 110}ms` } as React.CSSProperties}
-              className="relative grid grid-cols-[3rem_1fr] gap-x-4 border-b border-white/15 py-6 sm:py-8 sm:pr-8 lg:block lg:border-b-0 lg:border-r lg:px-6 lg:py-10 lg:first:pl-0 lg:last:border-r-0 desk:py-[5svh]"
+              style={{ "--reveal-delay": "100ms" } as React.CSSProperties}
+              className="mt-6 max-w-md text-lg leading-relaxed text-white/80 desk:mt-[3svh] desk:text-fit-lead"
             >
-              <span
-                className={`step-bar absolute -top-px left-0 h-0.5 w-12 bg-brand-blue ${i === 0 ? "" : "lg:left-6"}`}
-                aria-hidden
-              />
-              <span className="row-span-2 font-display text-3xl font-bold leading-none text-white/40 lg:text-6xl desk:text-fit-num">
-                {String(i + 1).padStart(2, "0")}
+              Todo el proceso se hace en nuestro taller.
+            </p>
+          </div>
+
+          <div
+            data-reveal
+            style={{ "--reveal-delay": "150ms" } as React.CSSProperties}
+            className="bg-brand-ink px-6 py-8 sm:px-16 sm:py-12 lg:col-span-7 desk:px-[7svh] desk:py-[5svh]"
+          >
+            <p className="flex items-baseline gap-4">
+              <span className="font-display text-6xl leading-none desk:text-fit-num">
+                +{BUSINESS.yearsExperience}
               </span>
-              <h3 className="font-display text-xl font-bold sm:text-2xl lg:mt-4 desk:mt-[3svh] desk:text-fit-h3">
-                {step.title}
-              </h3>
-              <p className="mt-2 text-base leading-relaxed text-white/65 desk:mt-[1.5svh] desk:text-fit-body">
-                {step.description}
-              </p>
-            </li>
-          ))}
-        </ol>
+              <span className="text-base text-white/70 desk:text-fit-body">
+                años reparando convertidores
+              </span>
+            </p>
+
+            <ol className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 desk:mt-[4svh] desk:gap-x-[4svh] desk:gap-y-[3svh]">
+              {STEPS.map((step, i) => (
+                <li
+                  key={step.title}
+                  data-reveal
+                  style={{ "--reveal-delay": `${200 + i * 90}ms` } as React.CSSProperties}
+                  className="border-l-[3px] border-brand-blue pl-6 desk:pl-[2.5svh]"
+                >
+                  <h3 className="font-display text-xl tracking-wide sm:text-2xl desk:text-fit-h3">
+                    {step.title}
+                  </h3>
+                  <p className="mt-2 text-base leading-relaxed text-white/70 desk:mt-[1svh] desk:text-fit-body">
+                    {step.description}
+                  </p>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </div>
       </div>
     </section>
   );

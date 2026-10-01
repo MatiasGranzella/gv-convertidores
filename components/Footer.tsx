@@ -14,7 +14,7 @@ export default function Footer() {
             className="h-12 w-12"
           />
           <div>
-            <p className="font-display text-lg font-bold leading-none text-white">
+            <p className="font-display text-xl leading-none tracking-wide text-white">
               {BUSINESS.name}
             </p>
             <p className="mt-2 text-sm">

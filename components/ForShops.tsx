@@ -20,11 +20,11 @@ const SPECS = [
 
 export default function ForShops() {
   return (
-    <section id="talleres" className="bg-white section-y screen">
+    <section id="talleres" className="bg-brand-light section-y screen">
       <div className="container-x desk:h-full">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-center lg:gap-16 desk:h-full desk:items-stretch">
           <div className="lg:col-span-5 desk:flex desk:min-h-0 desk:flex-col">
-            <h2 data-reveal className="display-title text-4xl text-brand-darker sm:text-6xl desk:text-fit-h2">
+            <h2 data-reveal className="title-bar display-title text-4xl text-brand-darker sm:text-6xl desk:text-fit-h2">
               Trabajamos para talleres y mecánicos
             </h2>
             <p
@@ -39,14 +39,17 @@ export default function ForShops() {
             <div
               data-reveal="scale"
               style={{ "--reveal-delay": "200ms" } as React.CSSProperties}
-              className="relative mt-8 aspect-[16/9] overflow-hidden md:mt-10 md:aspect-[3/2] rounded-sm bg-brand-ink desk:mt-[4svh] desk:aspect-auto desk:min-h-0 desk:flex-1">
-              <Image
-                src="/convertidor.jpg"
-                alt="Convertidor de torque sobre el banco de trabajo del taller"
-                fill
-                sizes="(max-width: 1024px) 100vw, 40vw"
-                className="object-cover"
-              />
+              className="offset-frame mt-8 md:mt-10 desk:mt-[4svh] desk:flex desk:min-h-0 desk:flex-1 desk:flex-col"
+            >
+              <div className="relative aspect-[16/9] overflow-hidden bg-brand-ink md:aspect-[3/2] desk:aspect-auto desk:min-h-0 desk:flex-1">
+                <Image
+                  src="/convertidor.jpg"
+                  alt="Convertidor de torque sobre el banco de trabajo del taller"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  className="object-cover"
+                />
+              </div>
             </div>
           </div>
 
@@ -57,9 +60,9 @@ export default function ForShops() {
                   key={s.term}
                   data-reveal
                   style={{ "--reveal-delay": `${i * 80}ms` } as React.CSSProperties}
-                  className="grid grid-cols-[7.5rem_1fr] items-baseline gap-4 border-b border-brand-gray-light py-4 sm:grid-cols-[10rem_1fr] sm:gap-6 sm:py-6 desk:grid-cols-[11em_1fr] desk:py-[2.6svh] desk:text-fit-body"
+                  className="grid grid-cols-[7.5rem_1fr] items-baseline gap-4 border-b border-brand-darker/15 py-4 sm:grid-cols-[10rem_1fr] sm:gap-6 sm:py-6 desk:grid-cols-[11em_1fr] desk:py-[2.6svh] desk:text-fit-body"
                 >
-                  <dt className="text-base font-semibold text-brand-blue-dark desk:text-fit-body">
+                  <dt className="font-display text-lg tracking-wide text-brand-blue desk:text-fit-lead">
                     {s.term}
                   </dt>
                   <dd className="text-base font-medium leading-snug text-brand-darker sm:text-xl desk:text-fit-lead desk:leading-snug">

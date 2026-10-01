@@ -50,9 +50,42 @@ export const HOURS = {
   schema: ["Mo-Fr 08:00-16:00"],
 } as const;
 
-// URL del embed de Google Maps (sacar de Maps → Compartir → Insertar mapa → copiar src del iframe).
+// Ficha de Google Maps del taller (por CID, abre directo el perfil con las reseñas).
+export const GOOGLE = {
+  mapsUrl: "https://maps.google.com/?cid=4139739064758980599",
+  // Actualizar a mano cuando lleguen reseñas nuevas.
+  rating: "5,0",
+  reviewCount: 12,
+} as const;
+
+// Reseñas copiadas textuales de la ficha de Google Maps (octubre 2026).
+// No corregir ni inventar: si se agrega una, que sea real y tal cual está en Google.
+export const REVIEWS = [
+  {
+    author: "Adrian grandoso",
+    text: "Excelente atención y trabajo.. muy atento,serio y responsable ayudando y aconsejando... 5 ⭐ por eso.. muy recomendable..",
+  },
+  {
+    author: "Ra Lopez",
+    text: "Excelente servicio, me consiguieron todos los materiales en tiempo record y la mano de obra rapidisimo, nada como ellos, muy recomendado.",
+  },
+  {
+    author: "sebastian perez del rio",
+    text: "Siempre responsables, nunca un problema, excelente la atención personal muy calificado.",
+  },
+  {
+    author: "Mariano zanese",
+    text: "Exelente atención y trabajos de primera calidad.",
+  },
+  {
+    author: "Sebastian Tejerina",
+    text: "De absoluta confianza y amabilidad",
+  },
+] as const;
+
+// URL del embed de Google Maps: muestra la ficha del taller (nombre, estrellas y reseñas).
 export const MAPS_EMBED_URL =
-  "https://www.google.com/maps?q=Coronel%20Antonio%20Susini%202335%2C%20C1414CXH%20CABA&output=embed";
+  "https://maps.google.com/maps?cid=4139739064758980599&output=embed";
 
 // Helper para construir el link de WhatsApp con mensaje pre-llenado.
 export function whatsappLink(message: string = CONTACT.whatsappPrefilledMessage): string {

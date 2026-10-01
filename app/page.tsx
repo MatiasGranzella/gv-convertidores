@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import ForShops from "@/components/ForShops";
 import Process from "@/components/Process";
 import ForOwners from "@/components/ForOwners";
+import Reviews from "@/components/Reviews";
 import Location from "@/components/Location";
 import Footer from "@/components/Footer";
 
@@ -15,6 +16,7 @@ export default function Home() {
         <ForShops />
         <ForOwners />
         <Process />
+        <Reviews />
         <Location />
       </main>
       <Footer />

@@ -1,23 +1,23 @@
 import type { Metadata, Viewport } from "next";
-import { Barlow, Barlow_Condensed } from "next/font/google";
+import { Anton, Inter } from "next/font/google";
 import { BUSINESS } from "@/lib/contact";
 import { localBusinessJsonLd } from "@/lib/seo";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import RevealObserver from "@/components/RevealObserver";
 import "./globals.css";
 
-const body = Barlow({
+const body = Inter({
   subsets: ["latin"],
   variable: "--font-body",
   display: "swap",
-  weight: ["400", "500", "600", "700"],
 });
 
-const display = Barlow_Condensed({
+// Anton tiene un solo peso (400): los títulos no llevan font-bold.
+const display = Anton({
   subsets: ["latin"],
   variable: "--font-display",
   display: "swap",
-  weight: ["600", "700", "800"],
+  weight: "400",
 });
 
 export const metadata: Metadata = {

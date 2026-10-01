@@ -1,4 +1,4 @@
-import { BUSINESS, CONTACT, ADDRESS, HOURS } from "./contact";
+import { BUSINESS, CONTACT, ADDRESS, HOURS, GOOGLE } from "./contact";
 
 export function localBusinessJsonLd() {
   const hasGeo = ADDRESS.latitude !== null && ADDRESS.longitude !== null;
@@ -58,7 +58,7 @@ export function localBusinessJsonLd() {
           "Apertura, control, reparación, soldadura y prueba hidráulica, todo en taller propio. Autos, camionetas, autoelevadores y equipos viales.",
       },
     },
-    // TODO: agregar el link de Google Maps del perfil de empresa cuando exista.
-    sameAs: [],
+    hasMap: GOOGLE.mapsUrl,
+    sameAs: [GOOGLE.mapsUrl],
   };
 }

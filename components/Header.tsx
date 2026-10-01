@@ -9,11 +9,21 @@ const NAV = [
   { label: "Talleres", href: "#talleres", id: "talleres" },
   { label: "Síntomas", href: "#sintomas", id: "sintomas" },
   { label: "Proceso", href: "#proceso", id: "proceso" },
+  { label: "Opiniones", href: "#opiniones", id: "opiniones" },
   { label: "Contacto", href: "#contacto", id: "contacto" },
 ];
 
 export default function Header() {
   const [activeId, setActiveId] = useState<string>("");
+  const [scrolled, setScrolled] = useState(false);
+
+  // Transparente sobre el hero; con fondo en cuanto se scrollea.
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 16);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   useEffect(() => {
     const sections = ["top", ...NAV.map((n) => n.id)]
@@ -39,7 +49,13 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="fixed top-0 z-40 w-full border-b border-white/10 bg-brand-ink/95 backdrop-blur">
+    <header
+      className={`fixed top-0 z-40 w-full border-b transition-colors duration-300 ${
+        scrolled
+          ? "border-white/10 bg-brand-ink/95 backdrop-blur"
+          : "border-white/20 bg-transparent"
+      }`}
+    >
       <div className="container-x flex h-16 items-center justify-between gap-6 sm:h-20 desk:h-[var(--nav-h)]">
         <a
           href="#top"
@@ -67,8 +83,8 @@ export default function Header() {
                 key={item.href}
                 href={item.href}
                 aria-current={isActive ? "true" : undefined}
-                className={`relative py-2 font-display text-lg font-semibold desk:text-fit-nav transition-colors hover:text-white ${
-                  isActive ? "text-white" : "text-white/60"
+                className={`relative py-2 text-base font-medium desk:text-fit-body transition-colors hover:text-white ${
+                  isActive ? "text-white" : "text-white/70"
                 }`}
               >
                 {item.label}
@@ -86,7 +102,7 @@ export default function Header() {
         <a
           href={phoneLink()}
           aria-label={`Llamar al taller: ${CONTACT.phoneDisplay}`}
-          className="flex min-h-11 items-center justify-center gap-2 rounded-sm bg-brand-blue px-4 py-2 font-display text-lg font-semibold desk:gap-[1svh] desk:px-[2svh] desk:py-[1.3svh] desk:text-fit-nav text-white transition-colors hover:bg-brand-blue-dark"
+          className="flex min-h-11 items-center justify-center gap-2 rounded-full bg-brand-blue px-6 py-2 font-display text-lg tracking-wide text-white shadow-lg shadow-brand-ink/40 transition-colors hover:bg-brand-blue-dark desk:gap-[1svh] desk:px-[3svh] desk:py-[1.2svh] desk:text-fit-nav"
         >
           <Phone className="h-4 w-4 desk:h-[2svh] desk:w-[2svh]" aria-hidden />
           <span className="sm:hidden">Llamar</span>

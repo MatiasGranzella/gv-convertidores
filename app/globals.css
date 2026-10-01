@@ -34,6 +34,8 @@ html {
 html,
 body {
   background: #ffffff;
+  /* Anton tiene un solo peso: que el navegador no le invente una negrita. */
+  font-synthesis: none;
   color: var(--brand-dark);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -93,9 +95,48 @@ body {
   }
 
   .display-title {
-    @apply font-bold leading-[1.05] tracking-tight;
+    @apply font-normal leading-[1.08];
     text-wrap: balance;
     font-family: var(--font-display), var(--font-body), sans-serif;
+  }
+
+  /* Barra azul vertical a la izquierda de los títulos, en el margen. */
+  @media (min-width: 1024px) {
+    .title-bar {
+      position: relative;
+    }
+
+    .title-bar::before {
+      content: "";
+      position: absolute;
+      left: -24px;
+      top: 0.08em;
+      bottom: 0.08em;
+      width: 3px;
+      background: var(--brand-blue);
+    }
+  }
+
+  /* Imagen con un bloque azul corrido abajo a la izquierda. */
+  .offset-frame {
+    position: relative;
+    padding: 0 0 16px 16px;
+  }
+
+  .offset-frame::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 32px;
+    right: 32px;
+    background: var(--brand-blue);
+  }
+
+  @media (min-width: 1024px) {
+    .offset-frame {
+      padding: 0 0 24px 24px;
+    }
   }
 
   /* Textura de acero cepillado, muy sutil, para las bandas oscuras. */
@@ -130,18 +171,6 @@ body {
   .js [data-reveal].is-visible {
     opacity: 1;
     transform: none;
-  }
-
-  /* Línea azul de cada paso del proceso: se dibuja de izquierda a derecha. */
-  .js .step-bar {
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1)
-      calc(var(--reveal-delay, 0ms) + 200ms);
-  }
-
-  .js .is-visible .step-bar {
-    transform: scaleX(1);
   }
 
   /* Tarjetas: se levantan al pasar el mouse. */
