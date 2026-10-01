@@ -25,7 +25,8 @@ export default function Footer() {
 
         <div className="text-sm sm:text-right">
           <p>
-            © {new Date().getFullYear()} {BUSINESS.name}
+            © {new Date().getFullYear()} {BUSINESS.name}. Todos los derechos
+            reservados.
           </p>
         </div>
       </div>
