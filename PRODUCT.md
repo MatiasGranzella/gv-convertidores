@@ -16,7 +16,7 @@ Landing page for GV Convertidores de Par, a real family-run workshop in Villa Cr
 Single-specialty shop: they don't do general mechanics, only torque converters. Same shop and same hands for more than 40 years. The whole process (opening, inspection, repair, welding, hydraulic test) is done in-house. The customer talks directly with the technician.
 
 ## Operating Context
-Contact happens through WhatsApp (prefilled message) and phone. Hours: Monday to Friday, 8:00 to 16:00. Covers converters for cars, pickups, forklifts and road equipment. There is NO warranty: never mention one. Never state turnaround times or how the converter gets to the shop; both depend on each job.
+Contact happens through WhatsApp (prefilled message) and phone. Hours: Monday to Friday, 8:00 to 16:00. Covers converters for cars, pickups, forklifts and road equipment. Confirmed 2026-10-01: there IS a warranty (if the converter fails or there is a problem, the shop covers shipping and the repair). Turnaround: 48 to 72 hours. They receive and ship converters to the rest of the country via Vía Cargo or regular parcel services. Only original parts, imported from the United States. The converter is always repaired, never swapped for a whole unit. All car brands. Never publish prices.
 
 ## Capabilities and Constraints
 - Next.js 15 App Router + Tailwind 3; contact data centralized in `lib/contact.ts`.

@@ -10,6 +10,7 @@ const NAV = [
   { label: "Síntomas", href: "#sintomas", id: "sintomas" },
   { label: "Proceso", href: "#proceso", id: "proceso" },
   { label: "Opiniones", href: "#opiniones", id: "opiniones" },
+  { label: "Preguntas", href: "#preguntas", id: "preguntas" },
   { label: "Contacto", href: "#contacto", id: "contacto" },
 ];
 
