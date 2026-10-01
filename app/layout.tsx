@@ -50,9 +50,9 @@ export const metadata: Metadata = {
     locale: "es_AR",
     url: BUSINESS.siteUrl,
     siteName: BUSINESS.name,
-    title: `Reparación de convertidores de torque en Buenos Aires | ${BUSINESS.name}`,
+    title: `Reparación de convertidores de torque | ${BUSINESS.name}`,
     description:
-      "Solo convertidores de torque, desde hace más de 40 años. Taller propio en Villa Crespo, CABA.",
+      "Solo convertidores de torque desde hace más de 40 años. Taller propio en Villa Crespo, CABA.",
     images: [
       {
         url: "/og-image.jpg",
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `Reparación de convertidores de torque | ${BUSINESS.name}`,
     description:
-      "Especialistas en convertidores de torque para cajas automáticas en Buenos Aires.",
+      "Solo convertidores de torque desde hace más de 40 años. Taller propio en Villa Crespo, CABA.",
     images: ["/og-image.jpg"],
   },
   robots: {
